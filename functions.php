@@ -24,12 +24,8 @@ $usernames = $wpdb->get_results("SELECT ID, user_nicename, user_email FROM $wpdb
  
 foreach ($usernames as $username) {
 	
-if (!$username->user_url) :
  $str .= '<li class="m-2">' .get_avatar($username->user_email, 45) .'<a href="/profile/?id='. $username->ID.'" class="ml-2">'.$username->user_nicename."</a></li>";
 
-else :
-$str .= '<li class="m-2">' .get_avatar($username->user_email, 45) .'<a href="'.$username->user_url.'" class="ml-2">'.$username->user_nicename."</a></li>";
-endif;
 }
 $str .= '</ul>';
  
