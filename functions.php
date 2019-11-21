@@ -61,11 +61,6 @@ function one_user()
 	return $str;
 }
 
-do_action( 'user_new_form', 'test' );
-function test()
-{
-	
-echo 'test';
-}
+
 //add_filter('user_new_form', 'custom_fields_add'); 
 
